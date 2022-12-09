@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [emoji, setEmoji] = useState("👻");
+  const [emojiColor, setEmojiColor] = useState("red");
 
   return (
     <>
@@ -16,7 +17,10 @@ function App() {
           <div className="emoji-editor-container col-6">
             <h3>Output:</h3>
             <div className="main-emoji-container">
-              <div className="main-emoji" style={{ backgroundColor: "maroon" }}>
+              <div
+                className="main-emoji"
+                style={{ backgroundColor: emojiColor }}
+              >
                 <div className="emoji">{emoji}</div>
               </div>
               <div className="emoji-container">
@@ -49,12 +53,31 @@ function App() {
 
           <div className="control-editor col-6">
             <h3>Input:</h3>
-            <div className="control-container">
-              <div className="color-item bg-red">Red</div>
-              <div className="color-item bg-purple">Purple</div>
-              <div className="color-item bg-pink">Pink</div>
-              <div className="color-item bg-orange">Orange</div>
-              <div className="color-item bg-green">Green</div>
+
+            <div className="color-select">
+              <div className="control-container">
+                <div
+                  className="color-item bg-red"
+                  onClick={() => setEmojiColor("#ff0000")}
+                ></div>
+                <div
+                  className="color-item bg-purple"
+                  onClick={() => setEmojiColor("#800080")}
+                ></div>
+                <div
+                  className="color-item bg-pink"
+                  onClick={() => setEmojiColor("#ffc0cb")}
+                ></div>
+                <div
+                  className="color-item bg-orange"
+                  onClick={() => setEmojiColor("#ffa500")}
+                ></div>
+                <div
+                  className="color-item bg-green"
+                  onClick={() => setEmojiColor("green")}
+                ></div>
+              </div>
+
             </div>
           </div>
         </div>
