@@ -26,6 +26,7 @@
     height: 60vh;
     margin-left: auto;
     margin-right: auto;
+
     background-color: #fff;
     border-radius: 15px;
 
@@ -36,7 +37,10 @@
 .main-emoji{
     font-size: 5rem;
     margin: 0;
-    padding: 0;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius:15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
 
 .emoji-container{

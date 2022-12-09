@@ -1,7 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [emoji, setEmoji] = useState("👻");
+
   return (
     <>
       <div className="container-fluid">
@@ -12,15 +15,32 @@ function App() {
 
       <div className="main-emoji-container">
         <div className="main-emoji">
-          <div className="emoji">👻</div>
-          
+          <div className="emoji">{emoji}</div>
         </div>
         <div className="emoji-container">
-          <div className="emoji">⚰️</div>
-          <div className="emoji">🍑</div>
-          <div className="emoji">👀</div>
-          <div className="emoji">🗿</div>
-          <div className="emoji">💀</div>
+          <div className="emoji" onClick={() => setEmoji("⚰️")}>
+            ⚰️
+          </div>
+
+          <div className="emoji" onClick={() => setEmoji("👻")}>
+            👻
+          </div>
+
+          <div className="emoji" onClick={() => setEmoji("🍑")}>
+            🍑
+          </div>
+
+          <div className="emoji" onClick={() => setEmoji("👀")}>
+            👀
+          </div>
+
+          <div className="emoji" onClick={() => setEmoji("🗿")}>
+            🗿
+          </div>
+
+          <div className="emoji" onClick={() => setEmoji("💀")}>
+            💀
+          </div>
         </div>
       </div>
     </>
