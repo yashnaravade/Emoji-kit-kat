@@ -5,13 +5,50 @@
 
 .heading{
     font-size: 2rem;
-    width: 69%;
+    width: 75%;
     color: #fff;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    background-color: #000;
+    background: linear-gradient(to right, #000000, #434343);
     padding: 1rem;
     border-radius: 15px;
+}
+
+.main-emoji-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 69vw;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 15px;
+
+
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.main-emoji{
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.emoji-container{
+    display: flex;
+    justify-content: space-around;
+
+    flex-direction: row;
+    margin-top: 2rem;
+    width: 69%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
