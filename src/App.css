@@ -64,15 +64,24 @@
 
 .control-container {
   display: flex;
-  justify-content:space-evenly;
-  height: 60vh;
-  flex-direction: row;
+  justify-content: space-around;
+  flex-direction: column;
   margin-top: 1rem;
+  height: 60vh;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+ 
+}
+
+.color-options{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 1rem;
 }
 
 .color-item {
@@ -86,7 +95,8 @@
 }
 
 .color-item:hover {
-  border: #000000 2px solid;
+  border: #242121 2px solid;
+  transform: scale(1.1);
 }
 
 .bg-red {
@@ -107,4 +117,24 @@
 
 .bg-orange {
   background-color: #ffa500;
+}
+
+.size-control{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+input[type="range"] {
+  width:400px;
+}
+
+.rotate-control{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 1rem;
 }

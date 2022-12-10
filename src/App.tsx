@@ -56,28 +56,50 @@ function App() {
 
             <div className="color-select">
               <div className="control-container">
-                <div
-                  className="color-item bg-red"
-                  onClick={() => setEmojiColor("#ff0000")}
-                ></div>
-                <div
-                  className="color-item bg-purple"
-                  onClick={() => setEmojiColor("#800080")}
-                ></div>
-                <div
-                  className="color-item bg-pink"
-                  onClick={() => setEmojiColor("#ffc0cb")}
-                ></div>
-                <div
-                  className="color-item bg-orange"
-                  onClick={() => setEmojiColor("#ffa500")}
-                ></div>
-                <div
-                  className="color-item bg-green"
-                  onClick={() => setEmojiColor("green")}
-                ></div>
-              </div>
+                <div className="color-options">
+                  <div
+                    className="color-item bg-red"
+                    onClick={() => setEmojiColor("#ff0000")}
+                  ></div>
+                  <div
+                    className="color-item bg-purple"
+                    onClick={() => setEmojiColor("#800080")}
+                  ></div>
+                  <div
+                    className="color-item bg-pink"
+                    onClick={() => setEmojiColor("#ffc0cb")}
+                  ></div>
+                  <div
+                    className="color-item bg-orange"
+                    onClick={() => setEmojiColor("#ffa500")}
+                  ></div>
+                  <div
+                    className="color-item bg-green"
+                    onClick={() => setEmojiColor("green")}
+                  ></div>
+                </div>
+                <div className="size-control">
+                  <div className="control-label">Size</div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    className="slider"
+                    id="myRange"
+                  />
+                </div>
 
+                <div className="rotate-control">
+                  <div className="control-label">Rotate</div>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    className="slider"
+                    id="myRange"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
