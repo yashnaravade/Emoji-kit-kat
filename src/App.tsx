@@ -5,6 +5,8 @@ import "./App.css";
 function App() {
   const [emoji, setEmoji] = useState("👻");
   const [emojiColor, setEmojiColor] = useState("red");
+  const [emojiSize, setEmojiSize] = useState(35);
+  const [emojiRotate, setEmojiRotate] = useState(1);
 
   return (
     <>
@@ -14,14 +16,22 @@ function App() {
         </div>
 
         <div className="row">
-          <div className="emoji-editor-container col-6">
+          <div className="emoji-editor-container col-md-6">
             <h3>Output:</h3>
             <div className="main-emoji-container">
               <div
-                className="main-emoji"
-                style={{ backgroundColor: emojiColor }}
+                className="main-emoji-box"
+                style={{
+                  backgroundColor: emojiColor,
+                  transform: `rotate(${emojiRotate}deg)`,
+                }}
               >
-                <div className="emoji">{emoji}</div>
+                <div
+                  className="main-emoji"
+                  style={{ fontSize: `${emojiSize}px` }}
+                >
+                  {emoji}
+                </div>
               </div>
               <div className="emoji-container">
                 <div className="emoji" onClick={() => setEmoji("⚰️")}>
@@ -51,7 +61,7 @@ function App() {
             </div>
           </div>
 
-          <div className="control-editor col-6">
+          <div className="control-editor col-md-6">
             <h3>Input:</h3>
 
             <div className="color-select">
@@ -84,8 +94,9 @@ function App() {
                     type="range"
                     min="1"
                     max="100"
-                    className="slider"
-                    id="myRange"
+                    onChange={(e) => {
+                      setEmojiSize(e.target.value);
+                    }}
                   />
                 </div>
 
@@ -94,9 +105,10 @@ function App() {
                   <input
                     type="range"
                     min="1"
-                    max="100"
-                    className="slider"
-                    id="myRange"
+                    max="360"
+                    onChange={(e) => {
+                      setEmojiRotate(e.target.value);
+                    }}
                   />
                 </div>
               </div>

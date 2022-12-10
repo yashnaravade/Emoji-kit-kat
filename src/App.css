@@ -30,8 +30,7 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.main-emoji {
-  font-size: 5rem !important;
+.main-emoji-box {
   margin: 0;
   padding: 30px;
   padding-left: 45px;
@@ -55,7 +54,7 @@
 }
 
 .emoji {
-  font-size: 2rem;
+  font-size: 30px;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -73,10 +72,9 @@
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
- 
 }
 
-.color-options{
+.color-options {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -119,7 +117,7 @@
   background-color: #ffa500;
 }
 
-.size-control{
+.size-control {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -128,10 +126,10 @@
 }
 
 input[type="range"] {
-  width:400px;
+  width: 400px;
 }
 
-.rotate-control{
+.rotate-control {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
