@@ -95,7 +95,7 @@ function App() {
                     min="1"
                     max="100"
                     onChange={(e) => {
-                      setEmojiSize(e.target.value);
+                      setEmojiSize(parseInt(e.target.value));
                     }}
                   />
                 </div>
@@ -107,7 +107,7 @@ function App() {
                     min="1"
                     max="360"
                     onChange={(e) => {
-                      setEmojiRotate(e.target.value);
+                      setEmojiRotate(parseInt(e.target.value));
                     }}
                   />
                 </div>
